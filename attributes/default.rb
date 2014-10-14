@@ -60,7 +60,11 @@ default['nginx']['upstart']['foreground']    = true
 
 default['nginx']['group'] = node['nginx']['user']
 
-default['nginx']['pid'] = '/var/run/nginx.pid'
+if node['platform'] == 'ubuntu' && node['platform_version'] >= '14.04'
+  default['nginx']['pid'] = '/run/nginx.pid'
+else
+  default['nginx']['pid'] = '/var/run/nginx.pid'
+end
 
 default['nginx']['gzip']              = 'on'
 default['nginx']['gzip_static']       = 'off'
