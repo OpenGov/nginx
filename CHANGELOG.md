@@ -2,6 +2,12 @@ nginx Cookbook CHANGELOG
 ========================
 This file is used to list changes made in each version of the nginx cookbook.
 
+v2.8.0 / 2016-11-06
+==================
+
+  * Loosened dependencies so that it works with newer cookbooks
+  * Updated ohai recipe to use newer way of creating ohain plugins
+
 v2.7.6 / 2015-03-17
 ==================
 
